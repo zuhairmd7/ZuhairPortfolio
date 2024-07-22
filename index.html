@@ -7,7 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Zuhair | Portfolio</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="mediaqueries.css" />
   <link rel="icon" href="./assets/ZUHAIR.jpg" type="image/x-icon">
   <link href="/dist/output.css" rel="stylesheet">
 </head>
@@ -64,14 +63,16 @@
       <p class="section__text__p1">Hello, I'm</p>
       <h1 class="title text-blue-800 font-bold">Zuhair Madmouj</h1>
       <p class="section__text__p2">Software Developer</p>
-      <div class="btn-container">
-        <button class="rounded-full font-bold btn-color-2 w-36" onclick="window.open('./assets/Zuhair_Madmouj_CV.pdf')">
+      <div class="flex items-center justify-around">
+        <button class="btn-color-2 px-4 py-2 rounded-full font-bold w-36 h-20 pr-5" onclick="window.open('./assets/Zuhair_Madmouj_CV.pdf')">
           Download CV
         </button>
-        <button class="btn bg-blue-800 text-white w-48" onclick="location.href='./#contact'">
+        <button class="bg-blue-800 text-white font-bold rounded-full px-4 py-2 w-48 h-20" onclick="location.href='./#contact'">
           Contact Info
         </button>
       </div>
+      
+      
       <div id="socials-container">
         <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon"
           onclick="location.href='https://linkedin.com/in/zuhair-madmouj-1001111b6/'" />
@@ -95,16 +96,16 @@
     <h1 class="title font-bold gradient-text">About Me</h1>
     <div class="section-container">
       <div class="section__pic-container">
-        <img src="./assets/AC6A1283.JPG" alt="Zuhair Profile picture_2" class="about-pic object-cover shadow-2xl shadow-blue-800 " />
+        <img src="./assets/AC6A1283.JPG" alt="Zuhair Profile picture_2" class="about-pic object-cover " />
       </div>
       <div class="about-details-container">
         <div class="about-containers">
-          <div class="details-container border border-blue-800">
+          <div class="details-container">
             <img src="./assets/experience.png" alt="Experience icon" class="h-10 w-10 ml-[270px]" />
             <h3 class="font-bold text-xl text-blue-800 mb-3">Experience</h3>
             <p class="text-black">1+ years <br />Software Development</p>
           </div>
-          <div class="details-container border border-blue-800">
+          <div class="details-container">
             <img src="./assets/education.png" alt="Education icon" class="h-10 w-10 ml-[270px] " />
             <h3 class="font-bold text-xl text-blue-800 mb-5">Education</h3>
             <p class="text-black">B.Sc. Bachelors Degree in Computer Science, An-Najah National University</p>
