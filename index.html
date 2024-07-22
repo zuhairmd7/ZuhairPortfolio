@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zuhair | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="mediaqueries.css" />
+  <link rel="icon" href="./assets/ZUHAIR.jpg" type="image/x-icon">
+  <link href="/dist/output.css" rel="stylesheet">
+</head>
+
+<body>
+  <style>
+    .gradient-text {
+      background: linear-gradient(to right, #1e3a8a, #3b82f6);
+      /* Blue gradient */
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      color: transparent;
+      /* Use color transparent to reveal the gradient */
+    }
+  </style>
+  
+  <nav id="desktop-nav" class="hidden lg:flex lg:gap-14 lg:items-center lg:justify-around lg:px-4">
+    <div class="logo flex gap-4 gradient-text items-center">
+        Zuhair Madmouj
+    </div>
+    <div>
+        <ul class="nav-links flex gap-14">
+            <li><a href="#about" class="font-bold text-lg">About</a></li>
+            <li><a href="#experience" class="font-bold text-lg">Experience</a></li>
+            <li><a href="#projects" class="font-bold text-lg">Projects</a></li>
+            <li><a href="#contact" class="font-bold text-lg">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+  <nav id="hamburger-nav">
+    <div class="logo gradient-text">Zuhair Portfolio</div>
+    <div class="hamburger-menu">
+      <div class="hamburger-icon" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="menu-links">
+        <li><a href="#about" onclick="toggleMenu()">About</a></li>
+        <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+        <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+      </div>
+    </div>
+  </nav>
+  <section id="profile">
+    <div class="section__pic-container">
+      <img src="./assets/AC6A1308.JPG" alt="Zuhair Madmouj profile picture"
+        class="md:rounded-full object-cover overflow-hidden shadow-2xl shadow-blue-700 rounded-md" />
+    </div>
+    <div class="section__text">
+      <p class="section__text__p1">Hello, I'm</p>
+      <h1 class="title text-blue-800 font-bold">Zuhair Madmouj</h1>
+      <p class="section__text__p2">Software Developer</p>
+      <div class="btn-container">
+        <button class="rounded-full font-bold btn-color-2 w-36" onclick="window.open('./assets/Zuhair_Madmouj_CV.pdf')">
+          Download CV
+        </button>
+        <button class="btn bg-blue-800 text-white w-48" onclick="location.href='./#contact'">
+          Contact Info
+        </button>
+      </div>
+      <div id="socials-container">
+        <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon"
+          onclick="location.href='https://linkedin.com/in/zuhair-madmouj-1001111b6/'" />
+        <img src="./assets/github.png" alt="My Github profile" class="icon"
+          onclick="location.href='https://github.com/zuhairmd7'" />
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="h-8 w-10 flex"
+          onclick="location.href='https://x.com/zuhairmd7'">
+          <path
+            d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z" />
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="h-8 w-10 flex"
+          onclick="location.href='https://www.instagram.com/zuhairmd7/?hl=en'">
+          <path
+            d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+        </svg>
+      </div>
+    </div>
+  </section>
+  <section id="about">
+    <p class="section__text__p1">Get To Know More</p>
+    <h1 class="title font-bold gradient-text">About Me</h1>
+    <div class="section-container">
+      <div class="section__pic-container">
+        <img src="./assets/AC6A1283.JPG" alt="Zuhair Profile picture_2" class="about-pic object-cover shadow-2xl shadow-blue-800 " />
+      </div>
+      <div class="about-details-container">
+        <div class="about-containers">
+          <div class="details-container border border-blue-800">
+            <img src="./assets/experience.png" alt="Experience icon" class="h-10 w-10 ml-[270px]" />
+            <h3 class="font-bold text-xl text-blue-800 mb-3">Experience</h3>
+            <p class="text-black">1+ years <br />Software Development</p>
+          </div>
+          <div class="details-container border border-blue-800">
+            <img src="./assets/education.png" alt="Education icon" class="h-10 w-10 ml-[270px] " />
+            <h3 class="font-bold text-xl text-blue-800 mb-5">Education</h3>
+            <p class="text-black">B.Sc. Bachelors Degree in Computer Science, An-Najah National University</p>
+          </div>
+        </div>
+        <div class="text-container">
+          <p class="text-black pb-3">
+            A driven 22 years old computer science programmer with a focus on the Frontend and Backend software
+            development
+            fields(Full Stack). Interested in precision and quality. dedicated to Skill enhancement and professional
+            growth in the
+            field.eager to apply Skills to meaningful projects.
+          </p>
+          <p class="text-black"><span class="font-bold underline">Featured Coursework:</span> Database, Object Oriented
+            Programming, Computer architecture and assembly language,
+            Algorithms, and Software Engineering, Web programming.</p>
+        </div>
+      </div>
+    </div>
+    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#experience'" />
+  </section>
+  <section id="experience">
+    <p class="section__text__p1">Explore My</p>
+    <h1 class="title font-bold gradient-text">Experience</h1>
+    <div class="experience-details-container">
+      <div class="about-containers">
+        <div class="details-container">
+          <h2 class="experience-sub-title">Frontend Development</h2>
+          <div class="article-container">
+            <article>
+              <img src="./assets/test_check.jpg" alt="Experience icon" class="icon" />
+              <div>
+                <h3 class="font-semibold text-xl">HTML</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/test_check.jpg" alt="Experience icon" class="icon" />
+              <div>
+                <h3 class="font-semibold text-xl">CSS</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/test_check.jpg" alt="Experience icon" class="icon" />
+              <div>
+                <h3 class="font-semibold text-xl">TailwindCSS</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/test_check.jpg" alt="Experience icon" class="icon" />
+              <div>
+                <h3 class="font-semibold text-xl">JavaScript</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/test_check.jpg" alt="Experience icon" class="icon" />
+              <div>
+                <h3 class="font-semibold text-xl">Livewire</h3>
+                <p>Basic</p>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="details-container">
+          <h2 class="experience-sub-title">Backend Development</h2>
+          <div class="article-container">
+            <article>
+              <img src="./assets/test_check.jpg" alt="Experience icon" class="icon" />
+              <div>
+                <h3 class="font-semibold text-xl">MySQL</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/test_check.jpg" alt="Experience icon" class="icon" />
+              <div>
+                <h3 class="font-semibold text-xl">Node JS</h3>
+                <p>Basic</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/test_check.jpg" alt="Experience icon" class="icon" />
+              <div>
+                <h3 class="font-semibold text-xl">Laravel</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/test_check.jpg" alt="Experience icon" class="icon" />
+              <div>
+                <h3 class="font-semibold text-xl">Git &Github</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="details-container">
+          <h2 class="experience-sub-title">DevOps Engineering</h2>
+          <div class="article-container">
+            <article>
+              <img src="./assets/test_check.jpg" alt="Experience icon" class="icon" />
+              <div>
+                <h3 class="font-semibold text-xl">Docker</h3>
+                <p>Basic</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'" />
+  </section>
+  <section class="mb-28">
+    <div id="projects" class="py-5 ">
+      <p class="section__text__p1 text-center text-base sm:text-lg md:text-xl lg:text-2xl">
+        Browse My Recent
+      </p>
+      <h1 class="title font-bold gradient-text text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
+        Projects
+      </h1>
+      <div class="flex flex-col md:flex-row ">
+        <div
+          class="w-full sm:w-4/5 md:w-3/5 lg:w-1/2 xl:w-2/5 h-auto mx-auto mt-8 sm:mt-12 md:mt-16 border border-black rounded-3xl p-4">
+          <img src="./assets/Screenshot 2024-07-20 233108.png" alt="Project Image"
+            class="w-full h-48 sm:h-64 md:h-80 lg:h-96 object-cover shadow-lg rounded-3xl">
+          <div class="p-4 sm:p-6">
+            <h2 class="text-lg sm:text-xl md:text-2xl font-bold">
+              ADEL a SAAS Platform
+            </h2>
+            <p class="text-gray-700 text-sm sm:text-base md:text-lg mb-4 sm:mb-6 md:mb-8">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores, quae laborum molestias earum nostrum
+              exercitationem, possimus officiis placeat alias incidunt mollitia, cupiditate quisquam eligendi odit quo
+              quos dolores inventore velit?
+            </p>
+            <button onclick="location.href='https://github.com/zuhairmd7/project-repo'"
+              class="flex mx-auto text-black font-bold border border-black py-2 px-4 rounded-3xl">
+              View on GitHub
+            </button>
+          </div>
+        </div>
+
+        <div
+          class="w-full sm:w-4/5 md:w-3/5 lg:w-1/2 xl:w-2/5 h-auto mx-auto mt-8 sm:mt-12 md:mt-16 border border-black rounded-3xl p-4">
+          <img src="./assets/Static web.jpg" alt="Static Project Image"
+            class="w-full h-48 sm:h-64 md:h-80 lg:h-96 object-cover shadow-lg rounded-3xl">
+          <div class="p-4 sm:p-6">
+            <h2 class="text-lg sm:text-xl md:text-2xl font-bold">
+              Static Website
+            </h2>
+            <p class="text-gray-700 text-sm sm:text-base md:text-lg mb-4 sm:mb-6 md:mb-8">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores, quae laborum molestias earum nostrum
+              exercitationem, possimus officiis placeat alias incidunt mollitia, cupiditate quisquam eligendi odit quo
+              quos dolores inventore velit?
+            </p>
+            <button onclick="location.href='https://github.com/zuhairmd7/project-repo'"
+              class="flex mx-auto text-black font-bold border border-black py-2 px-4 rounded-3xl">
+              View on GitHub
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'" />
+  </section>
+
+  <div id="lang" class="mt-20 w-auto bg-blue-800">
+    <div class="font-bold text-center">
+      <p class="text-white pt-6">"Master Communication, Master the World"</p>
+      <h1 class="text-white text-4xl">Languages</h1>
+    </div>
+    <div class="flex flex-col pb-8 md:flex-row items-center py-4 md:justify-around text-lg md:text-2xl md:text-center text-white">
+      <h1 class="font-bold2
+      ">- Arabic (Main)</h1>
+      <h1 class="font-bold">- English (Good)</h1>
+    </div>
+  </div>
+  
+  <section id="experience" class="py-12 px-4">
+    <div class="max-w-6xl mx-auto">
+        <p class="section__text__p1 text-black text-center text-lg">Explore My</p>
+        <h1 class="title font-bold gradient-text text-center text-2xl md:text-3xl lg:text-5xl mt-4 mb-20">
+            Awards, Competitions & Extracurriculars from Student associations at the
+            university
+        </h1>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Achievement Card 1 -->
+            <div class="bg-gray-100 rounded-lg shadow-lg p-6">
+                <h2 class="font-bold text-xl mb-4">Back-End Programming with NODE JS Certificate</h2>
+                <p class="text-lg mb-4">
+                    For 25 training hours | 2023
+                </p>
+                <a href="./assets/NodeJS-Zuhair Madmouj.pdf" target="_blank" class="text-blue-800 hover:underline">
+                    View Certificate
+                </a>
+                <img src="./assets/NodeJS-Zuhair Madmouj_page-0001.jpg" alt="NodeJS Certificate Photo" class="mt-4 rounded-xl shadow-md">
+            </div>
+
+            <!-- Achievement Card 2 -->
+            <div class="bg-gray-100 rounded-lg shadow-lg p-6">
+                <h2 class="font-bold text-xl mb-4">Other Achievements</h2>
+                <ul class="list-disc pl-5 mb-4 space-y-5">
+                    <li>Supervisor and active participant in organizing the first local Palestinian competition for 2024 innovation and robotics, organized through the Palestinian Ministry of Education | 2024</li>
+                    <li>Team building and prioritization, Creativity and innovation, Pitching Skills | 2023</li>
+                    <li>Project Management Certificate for 25 training hours | 2023</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="flex justify-center mt-10">
+            <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow cursor-pointer" onclick="location.href='#contact'" />
+        </div>
+    </div>
+</section>
+
+  <section id="contact" class="px-4 py-8 md:px-8 md:py-12 lg:px-16 lg:py-16 min-h-screen">
+    <p class="section__text__p1 text-black text-center text-lg md:text-xl">Get in Touch</p>
+    <h1 class="title gradient-text font-bold text-center text-2xl md:text-3xl lg:text-4xl mt-4">Contact Me</h1>
+    <div class="flex flex-col md:flex-row justify-center text-center md:text-left mx-auto gap-4 items-center border-2 border-dashed border-blue-800 md:rounded-full p-4 mt-8 max-w-4xl">
+      <div class="contact-info-container flex items-center m-2">
+          <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon w-8 h-8 md:w-10 md:h-10" />
+          <p class="ml-2 text-sm md:text-base"><a href="https://www.linkedin.com/in/zuhair-madmouj-1001111b6/" target="_blank" class="hover:underline">LinkedIn</a></p>
+      </div>
+        <div class="contact-info-container flex items-center m-2">
+            <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon w-8 h-8 md:w-12 md:h-12" />
+            <p class="ml-2 text-sm md:text-base"><a href="mailto:zuhairrmd@gmail.com" class="hover:underline">zuhairrmd@gmail.com</a></p>
+        </div>
+        <div class="contact-info-container flex items-center m-2">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="h-8 md:h-10 text-blue-600">
+                <path d="M92.1 254.6c0 24.9 7 49.2 20.2 70.1l3.1 5-13.3 48.6L152 365.2l4.8 2.9c20.2 12 43.4 18.4 67.1 18.4h.1c72.6 0 133.3-59.1 133.3-131.8c0-35.2-15.2-68.3-40.1-93.2c-25-25-58-38.7-93.2-38.7c-72.7 0-131.8 59.1-131.9 131.8zM274.8 330c-12.6 1.9-22.4 .9-47.5-9.9c-36.8-15.9-61.8-51.5-66.9-58.7c-.4-.6-.7-.9-.8-1.1c-2-2.6-16.2-21.5-16.2-41c0-18.4 9-27.9 13.2-32.3c.3-.3 .5-.5 .7-.8c3.6-4 7.9-5 10.6-5c2.6 0 5.3 0 7.6 .1c.3 0 .5 0 .8 0c2.3 0 5.2 0 8.1 6.8c1.2 2.9 3 7.3 4.9 11.8c3.3 8 6.7 16.3 7.3 17.6c1 2 1.7 4.3 .3 6.9c-3.4 6.8-6.9 10.4-9.3 13c-3.1 3.2-4.5 4.7-2.3 8.6c15.3 26.3 30.6 35.4 53.9 47.1c4 2 6.3 1.7 8.6-1c2.3-2.6 9.9-11.6 12.5-15.5c2.6-4 5.3-3.3 8.9-2s23.1 10.9 27.1 12.9c.8 .4 1.5 .7 2.1 1c2.8 1.4 4.7 2.3 5.5 3.6c.9 1.9 .9 9.9-2.4 19.1c-3.3 9.3-19.1 17.7-26.7 18.8zM448 96c0-35.3-28.7-64-64-64H64C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96zM148.1 393.9L64 416l22.5-82.2c-13.9-24-21.2-51.3-21.2-79.3C65.4 167.1 136.5 96 223.9 96c42.4 0 82.2 16.5 112.2 46.5c29.9 30 47.9 69.8 47.9 112.2c0 87.4-72.7 158.5-160.1 158.5c-26.6 0-52.7-6.7-75.8-19.3z" />
+            </svg>
+            <p class="ml-2 text-sm md:text-base">+(970) 59-214-2607</p>
+        </div>
+    </div>
+</section>
+
+
+  
+<style>
+html, body {
+  height: 100%;
+  margin: 0;
+/*   padding: 0;
+ */}
+
+
+#lang {
+  margin-bottom: 0; /* Ensure no extra margin */
+  padding-bottom: 0; /* Ensure no extra padding */
+}
+</style>
+
+  <div class="bg-blue-800 relative">
+    <div class="flex flex-col sm:flex-row text-center items-center justify-center py-0">
+      <nav class="h-20 mb-10 md:mb-0">
+        <ul class="nav-links text-white text-[1.2rem] flex flex-col sm:flex-row justify-center">
+          <li class=" sm:mb-0 sm:mr-0"><a href="#about" class="hover:text-gray-400 text-white">About</a></li>
+          <h1 class="hidden sm:inline mx-2">|</h1>
+          <li class="mb-2 sm:mb-0 sm:mr-4"><a href="#experience" class="hover:text-gray-400 text-white">Experience</a></li>
+          <h1 class="hidden sm:inline mx-2">|</h1>
+          <li class="mb-2 sm:mb-0 sm:mr-4"><a href="#projects" class="hover:text-gray-400 text-white">Projects</a></li>
+          <h1 class="hidden sm:inline mx-2">|</h1>
+          <li class="mb-2 sm:mb-0 sm:mr-4"><a href="#contact" class="hover:text-gray-400 text-white">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <footer>
+    <div class="footer-content bg-gray-500 ">
+      <p class="text-white py-1">&copy; 2024 Zuhair Madmouj. All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
