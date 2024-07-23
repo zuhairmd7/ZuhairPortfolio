@@ -469,7 +469,17 @@ footer p {
 }
 
 
+html, body {
+  height: 100%;
+  margin: 0;
+/*   padding: 0;
+ */}
 
+
+#lang {
+  margin-bottom: 0; /* Ensure no extra margin */
+  padding-bottom: 0; /* Ensure no extra padding */
+}
 
 
 
